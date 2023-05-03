@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Iso&family=Ruslan+Display&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg-color-dark: rgba(56, 69, 90);
+    --bg-color-light: rgba(205, 200, 197, 0.85);
+    --font: 'Unbounded';
+    --text-shadow: 2px 2px 1px rgb(32, 30, 42);
+    --text-color: rgb(223, 179, 147);
+    --text-color-more-transparent: rgba(223, 179, 147, 0.615);
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: var(--font);
+    color: var(--text-color);
+    text-shadow: var(--text-shadow);
+    font-size: 17px;
+}
+
+.page_not_found {
+    backdrop-filter:
+        blur(5px) grayscale(50%);
+}
+
+.page_not_found_content {
+    animation: page_not_found 2s;
+}
+
+nav {
+    background-color: rgb(56, 69, 90);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.696);
+    transition: .5s;
+}
+
+nav:hover {
+    box-shadow: 0 2px 100px var(--text-color);
+}
+
+.main {
+    text-shadow: var(--text-shadow);
+    padding: 40px;
+    border-radius: 20px;
+    animation: main .5s;
+}
+
+.card {
+    color: var(--text-color);
+    filter: blur(4px);
+    transition: .5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: none;
+}
+
+input {
+    background-color: var(--text-color) !important;
+    border: none !important;
+}
+
+button {
+    background-color: var(--text-color) !important;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    transition: .5s;
+}
+
+.offcanvas {
+    background-color: var(--bg-color-dark);
+    transition: .5s;
+}
+
+.offcanvas:hover {
+    box-shadow: 2px 0 100px var(--text-color);
+}
+
+.ex_2_menu {
+    color: var(--text-color);
+    text-shadow: var(--text-shadow);
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: 10px solid var(--text-color);
+}
+
+.ps {
+    width: 55vw;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--bg-color-dark);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.joke {
+    background-image: url(../images/serious_python.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: scroll;
+    background-position: center;
+    position: sticky;
+    top: 25vh;
+    height: 50vh;
+}
+
+.exercise {
+    margin-top: 25vh;
+    background-color: var(--bg-color-dark);
+    padding: 30px;
+    border-radius: 20px;
+    /* box-shadow:
+        3px 3px 10px var(--text-color),
+        -3px -3px 10px var(--text-color); */
+    transition: .5s;
+    animation: exercise .5s;
+}
+
+.exercise:hover {
+    box-shadow: 
+        2px 2px 50px var(--text-color-more-transparent),
+        -2px -2px 50px var(--text-color-more-transparent);
+    transform: scale(1.05);
+}
+
+.submit {
+    margin-left: 20px;
+}
+
+.ex_3_ps {
+    font-size: 13px;
+}
+
+@keyframes exercise {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes main {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes page_not_found {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
