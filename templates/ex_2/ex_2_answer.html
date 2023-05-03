@@ -1,0 +1,37 @@
+{% extends 'ex_2/ex_2.html' %}
+
+{% block ex_2_answer %}
+<div class="offset-1 col-5 exercise ex_2_form d-flex flex-column justify-content-center align-items-center">
+
+    {% if ex_2_result['error']: %}
+    <div>
+        {% for error in ex_2_result: %}
+        <p>{{ ex_2_result[error] }}</p>
+        {% endfor %}
+    </div>
+    <a href="/ex_2">
+        <button class="mt-3" type="button">Попробовать снова</button>
+    </a>
+
+    {% else %}
+
+    <div>
+        <p>Отчет:</p>
+        <ol>
+            <li>Оценки</li>
+            <p>{{ ex_2_result['estimates'] }}</p>
+            <li>Пересдача</li>
+            <p>{{ ex_2_result['new_estimates'] }}</p>
+            <li>Стипендия</li>
+            <p>{{ ex_2_result['scholarship'] }}</p>
+            <li>Сортировка</li>
+            <p>{{ ex_2_result['sorted'] }}</p>
+        </ol>
+    </div>
+    <a href="/ex_2">
+        <button class="mt-3" type="button">Оценить другого</button>
+    </a>
+
+    {% endif %}
+</div>
+{% endblock %}

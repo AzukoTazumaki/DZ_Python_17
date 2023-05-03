@@ -1,0 +1,41 @@
+{% extends 'main/index.html' %}
+
+{% include 'main/header.html' %}
+
+{% block ex_3 %}
+<div class="container">
+    <div class="row d-flex align-items-center">
+
+        <div class="col-8 exercise">
+            <h3 class="text-center my-3">Задание 3.</h3>
+            <p class="mb-3">Написать программу, реализующую сортировку списка
+                методом усовершенствованной сортировки пузырьковым
+                методом. Усовершенствование состоит в том, чтобы анализировать количество перестановок на каждом шагу, если
+                это количество равно нулю, то продолжать сортировку
+                нет смысла — список отсортирован.</p>
+            <form action="/ex_3" method="post">
+                <div class="d-flex justify-content-between align-items-center">
+                    <input class="form-control" name="length_of_list" type="text" placeholder="Введите число">
+                    <button class="submit" type="submit">Вывести</button>
+                </div>
+            </form>
+            <p class="mt-3">Результат: <br> {{ ex_3_result }}</p>
+            <div class="d-flex justify-content-center mt-5">
+                <a href="/">
+                    <button type="button">На главную страницу</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="offset-1 col-3 exercise">
+            <p class="ex_3_ps">Примечание: <br><br> в функцию приходит число из данных поля ввода, равное длине списка, и
+                далее случайные значения в случайном диапазоне добавляются в этот список. В дальнейшем в заданиях со списком целых я,
+                скорее всего, буду делать именно так. В данных примерах это удобнее. В задании 1, как и в прошлых, я использовал разделение
+                строки, приходящей из поля ввода, по пробелам и добавления каждого элемента в список, и только после этого с этим списком 
+                работал. Пробуем новое!
+            </p>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

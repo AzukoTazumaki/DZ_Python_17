@@ -1,0 +1,39 @@
+{% extends 'ex_2/ex_2.html' %}
+
+{% block ex_2_form %}
+<div class="offset-1 col-5 exercise ex_2_form">
+    <form action="/ex_2" method="post">
+        <h5>Заполните форму ученика:</h5>
+
+        <label for="estimates">Оценки</label>
+        <input id="estimates" name="estimates" class="form-control mt-1" type="text" placeholder="Введите оценки">
+        <p class="form-text text-light">*введите 10 оценок через пробел по шкале от 1 до 12</p>
+
+        <label>Пересдача</label>
+        <input class="form-control mt-1" name="number_of_estimate" type="text" placeholder="Введите номер оценки">
+        <p class="form-text text-light">*введите номер оценки, которую нужно пересдать</p>
+        <input class="form-control mt-1" name="new_estimate" type="text" placeholder="Введите оценку">
+        <p class="form-text text-light">*введите новую оценку студента после пересдачи</p>
+
+        <label>Сортировка</label>
+        <div class="form-check mt-1">
+            <input class="form-check-input" type="radio" 
+                    name="options" id="sort_ascending"
+                    value="sort_ascending">
+            <label class="form-check-label" 
+                    for="sort_ascending">Сортировать по возрастанию</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" 
+                    name="options" id="sort_descending"
+                    value="sort_descending">
+            <label class="form-check-label" 
+                    for="sort_descending">Сортировать по убыванию</label>
+        </div>
+        <p class="form-text text-light">*выберите нужную сортировку</p>
+        <div class="d-flex justify-content-end">
+            <button class="mt-3" type="submit">Отправить</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

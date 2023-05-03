@@ -1,0 +1,33 @@
+{% extends 'main/index.html' %}
+
+{% include 'main/header.html' %}
+
+{% block ex_2 %}
+<div class="container">
+    <div class="row d-flex align-items-center">
+
+        <div class="col-6 exercise">
+            <h3 class="text-center my-3">Задание 2.</h3>
+            <p class="mb-3">Написать программу «успеваемость». Пользователь
+                вводит 10 оценок студента. Оценки от 1 до 12. Реализовать
+                меню для пользователя: <br><br>
+                ■ Вывод оценок (вывод содержимого списка); <br><br>
+                ■ Пересдача экзамена (пользователь вводит номер элемента списка и новую оценку); <br><br>
+                ■ Выходит ли стипендия (стипендия выходит, если
+                средний бал не ниже 10.7); <br><br>
+                ■ Вывод отсортированного списка оценок: по возрастанию или убыванию.</p>
+            <div class="d-flex justify-content-center mt-5">
+                <a href="/">
+                    <button class="mx-4" type="button">На главную страницу</button>
+                </a>
+            </div>
+        </div>
+
+        {% block ex_2_form %}
+        {% endblock %}
+
+        {% block ex_2_answer %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

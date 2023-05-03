@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сортировка. Часть I.</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/master.css')}}">
+</head>
+
+<body class="page_not_found">
+
+    <header>
+        <nav class="navbar fixed-top">
+            <div class="container d-flex justify-content-center">
+                <a href="/">
+                    <img src="../static/images/logo.svg" width="190" alt="">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container page_not_found_content d-flex justify-content-center align-items-center vh-100">
+        <div class="row">
+                {% block page_not_found %}
+                {% endblock %}
+                
+                {% block bad_request %}
+                {% endblock %}
+            </div>
+    </div>
+</body>
+
+</html>

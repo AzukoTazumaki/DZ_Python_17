@@ -1,0 +1,30 @@
+{% extends 'main/index.html' %}
+
+{% include 'main/header.html' %}
+
+{% block ex_1 %}
+<div class="container">
+    <div class="row">
+        <div class="offset-2 col-8 exercise">
+            <h3 class="text-center my-3">Задание 1.</h3>
+            <p class="mb-3">Необходимо отсортировать первые две трети списка
+                в порядке возрастания, если среднее арифметическое
+                всех элементов больше нуля; иначе — лишь первую треть.
+                Остальную часть списка не сортировать, а расположить
+                в обратном порядке.</p>
+            <form action="/ex_1" method="post">
+                <div class="d-flex justify-content-between align-items-center">
+                    <input class="form-control" name="numbers_list" type="text" placeholder="Введите список">
+                    <button class="submit" type="submit">Вывести</button>
+                </div>
+            </form>
+            <p class="mt-3">Результат: <br> {{ ex_1_result }}</p>
+            <div class="d-flex justify-content-center mt-5">
+                <a href="/">
+                    <button type="button">На главную страницу</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

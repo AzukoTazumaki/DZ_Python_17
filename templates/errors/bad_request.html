@@ -1,0 +1,15 @@
+{% extends 'errors/errors_template.html' %}
+
+{% block bad_request %}
+<div class="offset-3 col-6">
+    <h2 class="text-center">Ошибка запроса :(</h2>
+    <p>p.s. Убедитесь, что полностью заполнили форму. В данном случае программа выдает ошибку
+        вследствие того, что Вы не выбрали метод сортировки. И да, это обязательно.
+    </p>
+    <div class="d-flex justify-content-center my-3">
+        <a href="/ex_2">
+            <button type="button">Попробовать снова</button>
+        </a>
+    </div>
+</div>
+{% endblock %}
